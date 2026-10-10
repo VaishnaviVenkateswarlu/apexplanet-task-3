@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn interesting facts and test your knowledge with Daily Knowledge Hub.">
+    <title>Daily Knowledge Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <p class="eyebrow">LEARN SOMETHING NEW</p>
+            <h1>Daily Knowledge Hub</h1>
+            <p class="subtitle">
+                Challenge your mind. Discover something amazing.
+            </p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="#quiz">Knowledge Quiz</a>
+        <a href="#facts">Interesting Facts</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- Interactive Quiz -->
+        <section id="quiz" class="card">
+            <div class="section-heading">
+                <span class="icon">🧠</span>
+                <div>
+                    <h2>Knowledge Quiz</h2>
+                    <p>Test what you know!</p>
+                </div>
+            </div>
+
+            <div class="quiz-info">
+                <span id="questionCounter">Question 1 of 5</span>
+                <span id="scoreDisplay">Score: 0</span>
+            </div>
+
+            <div class="progress-track">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <h3 id="question">Loading question...</h3>
+
+            <div id="options" class="options"></div>
+
+            <p id="quizMessage" class="message" aria-live="polite"></p>
+
+            <button id="nextButton" class="button" type="button" hidden>
+                Next Question →
+            </button>
+
+            <div id="quizResult" class="result" hidden>
+                <h3>Quiz Completed! 🎉</h3>
+                <p id="finalScore"></p>
+                <button id="restartButton" class="button" type="button">
+                    Try Again
+                </button>
+            </div>
+        </section>
+
+        <!-- Public API Facts -->
+        <section id="facts" class="card">
+            <div class="section-heading">
+                <span class="icon">🌍</span>
+                <div>
+                    <h2>Interesting Facts</h2>
+                    <p>Discover something new about the world.</p>
+                </div>
+            </div>
+
+            <div class="fact-box">
+                <span class="fact-label">DID YOU KNOW?</span>
+
+                <p id="factText" aria-live="polite">
+                    Click the button to discover an interesting fact!
+                </p>
+            </div>
+
+            <button id="factButton" class="button" type="button">
+                Discover a Fact →
+            </button>
+
+            <p id="apiStatus" class="api-status" aria-live="polite">
+                Facts are loaded from a public API.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS and JavaScript</p>
+        <p>ApexPlanet 45-Day Web Development Internship · Task 3</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
